@@ -1,0 +1,44 @@
+
+     function loginvalidateForm() {
+      var name = document.getElementById("Uname").value;
+      var alphaExp = /^[a-zA-Z]+$/;
+      if(name.match(alphaExp)){
+     
+      }else{
+      alert("Please enter a valid User name..");
+      name.focus();
+     
+      }
+      if ((name === ""))
+        {
+          alert("Please enter a valid User name..");
+         
+        }
+  
+
+    var pass = document.getElementById("pwd").value;
+    var pswd = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+    if(pswd.test(pass)){
+       
+        }else{
+        alert("Password should contain atleast 6 characters,atleast 1 digit,atleast one lowercase and uppercase character..");
+        pass.focus();
+       
+        }
+       return pswd.test(pass);
+       
+      var password1 = document.getElementById("pwd").value;
+           var password2 = document.getElementById("cpw").value;
+     
+                if(password1 != password2) {
+                    alert ("\nPassword did not match. Please try again...")
+                     
+                }  
+                else
+                {
+                alert ("\nPassword matched...")
+                }
+                     
+               
+               
+     }
